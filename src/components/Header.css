@@ -1,0 +1,162 @@
+
+.site-header {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Վերևի մուգ կապույտ հատված */
+.top-header {
+  min-height: 42px;
+  padding: 0 5%;
+  background: #003e59;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 13px;
+}
+
+.top-left,
+.top-right,
+.languages {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.top-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.top-header a:hover {
+  color: #ed3548;
+}
+
+/* Ներքևի սպիտակ հատված */
+.main-header {
+  min-height: 85px;
+  padding: 0 5%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.team-logo {
+  display: flex;
+  flex-direction: column;
+  color: #003e59;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.team-logo strong {
+  font-size: 34px;
+}
+
+.team-logo strong span {
+  color: #ed3548;
+}
+
+.team-logo small {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.main-menu a,
+.tariff-menu button {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.main-menu a:hover,
+.tariff-menu button:hover {
+  color: #003e59;
+}
+
+/* Սակագների բացվող ցանկ */
+.tariff-menu {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 220px;
+  background: white;
+  box-shadow: 0 5px 15px #0002;
+  border-radius: 5px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.dropdown a {
+  color: #16445c;
+  padding: 12px;
+}
+
+.dropdown a:hover {
+  background: #f2f4f6;
+}
+
+/* Վճարումներ */
+.payment-button {
+  color: white;
+  background: #ed3548;
+  padding: 13px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Հեռախոսի համար */
+@media (max-width: 900px) {
+  .main-header {
+    flex-wrap: wrap;
+    padding: 15px 4%;
+  }
+
+  .main-menu {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .top-header {
+    flex-wrap: wrap;
+    padding: 10px 4%;
+  }
+}
+
+@media (max-width: 500px) {
+  .top-left,
+  .top-right {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .main-menu {
+    width: 100%;
+  }
+
+  .payment-button {
+    padding: 10px 15px;
+  }
+}
