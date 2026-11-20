@@ -4,7 +4,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* Վերևի մուգ կապույտ հատված */
 .top-header {
   min-height: 42px;
   padding: 0 5%;
@@ -33,7 +32,6 @@
   color: #ed3548;
 }
 
-/* Ներքևի սպիտակ հատված */
 .main-header {
   min-height: 85px;
   padding: 0 5%;
@@ -85,10 +83,9 @@
 
 .main-menu a:hover,
 .tariff-menu button:hover {
-  color: #003e59;
+  color: #ed3548;
 }
 
-/* Սակագների բացվող ցանկ */
 .tariff-menu {
   position: relative;
 }
@@ -97,26 +94,36 @@
   position: absolute;
   top: 35px;
   left: 0;
-  width: 220px;
+  width: 280px;
   background: white;
   box-shadow: 0 5px 15px #0002;
   border-radius: 5px;
   z-index: 10;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 12px;
 }
 
 .dropdown a {
-  color: #16445c;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 12px;
+  color: #003e59;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown a img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
 }
 
 .dropdown a:hover {
   background: #f2f4f6;
 }
 
-/* Վճարումներ */
 .payment-button {
   color: white;
   background: #ed3548;
@@ -127,7 +134,6 @@
   white-space: nowrap;
 }
 
-/* Հեռախոսի համար */
 @media (max-width: 900px) {
   .main-header {
     flex-wrap: wrap;
