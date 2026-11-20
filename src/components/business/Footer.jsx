@@ -1,4 +1,4 @@
-import { footerCols } from "../data/content";
+import { footerCols } from "../../business/data/content";
 
 export default function Footer() {
   return (

@@ -1,5 +1,5 @@
 import Reveal from "./Reveal";
-import { pbx } from "../data/content";
+import { tariffs } from "../../business/data/content";   // Services-ում՝ services, VirtualPbx-ում՝ pbx
 
 export default function VirtualPbx() {
   return (

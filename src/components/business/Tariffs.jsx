@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import TariffCard from "./TariffCard";
 import Reveal from "./Reveal";
-import { tariffs } from "../data/content";
+import { tariffs } from "../../business/data/content";   // Services-ում՝ services, VirtualPbx-ում՝ pbx
 
 export default function Tariffs() {
   const track = useRef(null);
