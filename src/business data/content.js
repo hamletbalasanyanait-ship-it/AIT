@@ -4,3 +4,10 @@ export const tariffs = [
   { id: 2, type: "plan", name: "PRO", price: "5200", gb: "ԱՆՍԱՀՄԱՆ", min: "3,500", ch: "110", sms: "3,500" },
   { id: 3, type: "plan", name: "PRO", price: "7500", gb: "ԱՆՍԱՀՄԱՆ", min: "5,000", ch: "150", sms: "5,000" },
 ];
+
+export const services = [
+  { title: "ԿՈՐՊՈՐԱՏԻՎ ՑԱՆՑ", text: "Տեղեկատվության փոխանակման ապահով համակարգ", icon: "🌐" },
+  { title: "MOBILE ID", text: "Վճարումներ և նույնականացում բջջային հեռախոսի միջոցով", icon: "📱" },
+  { title: "M2M ԼՈՒԾՈՒՄՆԵՐ", text: "Տվյալների հուսալի փոխանցում", icon: "🔍" },
+  { title: "SMS-ԻՆՖՈ", text: "Զանգվածային SMS տարածման ծառայություն", icon: "✉️" },
+];
