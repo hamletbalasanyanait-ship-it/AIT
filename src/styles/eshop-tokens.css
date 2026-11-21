@@ -1,0 +1,67 @@
+/*
+ * E-shop design tokens
+ * Գույները վերցված են telecomarmenia.am/eshop/hy էջի screenshot-ից։
+ * Բոլոր փոփոխականները սկսվում են --eshop- նախածանցով։
+ * Font-երը միացվում են առանձին @import-ներով, որպեսզի մեկի անհասանելիությունը
+ * չկանգնեցնի մյուսներին։
+ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mardoto:wght@400;500;700&display=swap');
+
+:root {
+  /* Հիմնական գույներ */
+  --eshop-color-primary: #01425f;
+  --eshop-color-primary-dark: #022739;
+  --eshop-color-primary-light: #174d66;
+  --eshop-color-accent: #f04d4d;
+  --eshop-color-accent-border: #f15858;
+  --eshop-color-sky: #96d1db;
+  --eshop-color-sand: #e3ddd2;
+
+  /* Մակերեսներ և եզրագծեր */
+  --eshop-color-bg: #ffffff;
+  --eshop-color-banner-bg: #fcfcfc;
+  --eshop-color-white: #ffffff;
+  --eshop-color-surface-muted: #f5f6f7;
+  --eshop-color-border: #ebedef;
+  --eshop-color-divider: #dbddde;
+  --eshop-color-dot: #cacaca;
+  --eshop-color-icon: #174c68;
+
+  /* Տեքստ */
+  --eshop-color-text: #2c3843;
+  --eshop-color-text-muted: #666e75;
+  --eshop-color-footer-muted: #80a1af;
+
+  /* Տառատեսակներ */
+  --eshop-font-family: 'Montserrat', 'Noto Sans Armenian', 'Segoe UI', system-ui,
+    sans-serif;
+  --eshop-font-heading: 'Mardoto', 'Noto Sans Armenian', 'Montserrat', 'Segoe UI',
+    system-ui, sans-serif;
+
+  /* Spacing */
+  --eshop-space-xs: 4px;
+  --eshop-space-sm: 8px;
+  --eshop-space-md: 16px;
+  --eshop-space-lg: 24px;
+  --eshop-space-xl: 40px;
+
+  /* Կլորացումներ */
+  --eshop-radius-sm: 4px;
+  --eshop-radius-md: 8px;
+  --eshop-radius-lg: 10px;
+  --eshop-radius-pill: 999px;
+
+  /* Layout */
+  --eshop-header-height: 60px;
+  --eshop-page-max-width: 1200px;
+  --eshop-z-header: 100;
+  --eshop-z-chat: 90;
+}
+
+/*
+ * Breakpoint-ներ (CSS փոփոխականները @media-ում չեն աշխատում).
+ *   tablet  — @media (min-width: 768px)
+ *   desktop — @media (min-width: 1024px)
+ */
