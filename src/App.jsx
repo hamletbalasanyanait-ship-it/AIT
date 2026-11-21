@@ -1,7 +1,7 @@
-import Footer from './components/anhatner/anhatner-himnakan/footer'
+import EShopPage from './pages/EShop/EShopPage.jsx'
 
 function App() {
-  return <Footer />
+  return <EShopPage />
 }
 
 export default App

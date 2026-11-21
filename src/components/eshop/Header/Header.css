@@ -1,0 +1,240 @@
+/* ---------- Header (mobile-first) ---------- */
+.eshop-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--eshop-z-header);
+  background-color: var(--eshop-color-primary);
+  color: var(--eshop-color-white);
+}
+
+.eshop-header__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--eshop-header-height);
+  padding-left: 18px;
+}
+
+/* Logo */
+.eshop-logo {
+  display: flex;
+  align-items: center;
+  flex: none;
+  height: 100%;
+}
+
+.eshop-logo__img {
+  display: block;
+  height: 37px;
+  width: auto;
+}
+
+/* Action icons */
+.eshop-header__actions {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: auto;
+}
+
+.eshop-header__action {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(40px, 8vw, 59px);
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.eshop-header__action:hover {
+  color: var(--eshop-color-sky);
+}
+
+.eshop-header__action:focus-visible {
+  outline: 2px solid var(--eshop-color-sky);
+  outline-offset: -4px;
+}
+
+/* Ուղղահայաց բաժանարար գծեր icon-ների արանքում */
+.eshop-header__action + .eshop-header__action:not(.eshop-header__action--menu)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 20px;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+.eshop-header__action--menu {
+  width: clamp(44px, 8vw, 58px);
+}
+
+/* Կարմիր հաշվիչ (համեմատել / զամբյուղ) */
+.eshop-header__badge {
+  position: absolute;
+  top: 12px;
+  left: calc(50% + 2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 4px;
+  border-radius: var(--eshop-radius-pill);
+  background-color: var(--eshop-color-accent);
+  color: var(--eshop-color-white);
+  font-family: var(--eshop-font-family);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* ---------- Search ---------- */
+.eshop-search {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  padding: 10px 18px;
+  background-color: var(--eshop-color-primary-dark);
+}
+
+.eshop-search.is-open {
+  display: flex;
+}
+
+.eshop-search__input {
+  flex: 1;
+  min-width: 0;
+  height: 40px;
+  padding: 0 44px 0 14px;
+  border: 0;
+  border-radius: var(--eshop-radius-pill);
+  background-color: var(--eshop-color-white);
+  color: var(--eshop-color-text);
+  font-family: var(--eshop-font-family);
+  font-size: 14px;
+  outline: none;
+}
+
+.eshop-search__input:focus-visible {
+  box-shadow: 0 0 0 2px var(--eshop-color-sky);
+}
+
+.eshop-search__submit {
+  position: absolute;
+  right: 26px;
+  display: flex;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--eshop-color-primary);
+  cursor: pointer;
+}
+
+/* ---------- Navigation (mobile drawer) ---------- */
+.eshop-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: none;
+  background-color: var(--eshop-color-primary-dark);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.eshop-nav.is-open {
+  display: block;
+}
+
+.eshop-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.eshop-nav__item + .eshop-nav__item {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.eshop-nav__link {
+  display: block;
+  padding: 14px 18px;
+  color: var(--eshop-color-white);
+  font-family: var(--eshop-font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.eshop-nav__link:hover {
+  color: var(--eshop-color-sky);
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 1024px) {
+  .eshop-header__bar {
+    max-width: var(--eshop-page-max-width);
+    margin: 0 auto;
+    gap: 24px;
+    padding-left: 20px;
+  }
+
+  .eshop-header__action--menu,
+  .eshop-header__action--search {
+    display: none;
+  }
+
+  /* Menu inline */
+  .eshop-nav {
+    position: static;
+    display: block;
+    flex: 1;
+    min-width: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .eshop-nav__list {
+    display: flex;
+    gap: 22px;
+  }
+
+  .eshop-nav__item + .eshop-nav__item {
+    border-top: 0;
+  }
+
+  .eshop-nav__link {
+    padding: 0;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* Search inline */
+  .eshop-search,
+  .eshop-search.is-open {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    display: flex;
+    flex: none;
+    width: 260px;
+    padding: 0;
+    background: none;
+  }
+
+  .eshop-search__submit {
+    right: 12px;
+  }
+}

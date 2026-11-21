@@ -1,0 +1,94 @@
+.promo-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 5.2vw, 38px) clamp(14px, 4vw, 30px);
+  padding: 65px 25px 0;
+}
+
+.promo-tile {
+  position: relative;
+  display: block;
+  height: clamp(210px, 39vw, 288px);
+  overflow: hidden;
+  border-radius: var(--eshop-radius-lg);
+  color: var(--eshop-color-text);
+  text-align: center;
+  text-decoration: none;
+}
+
+.promo-tile--sky {
+  background-color: var(--eshop-color-sky);
+}
+
+.promo-tile--navy {
+  background-color: var(--eshop-color-primary);
+  color: var(--eshop-color-white);
+}
+
+.promo-tile--sand {
+  background-color: var(--eshop-color-sand);
+}
+
+.promo-tile__title {
+  position: absolute;
+  top: clamp(24px, 6.8vw, 36px);
+  right: 10%;
+  left: 10%;
+  margin: 0;
+  color: inherit;
+  font-family: var(--eshop-font-heading);
+  font-size: clamp(16px, 3.3vw, 24px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.promo-tile__cta {
+  position: absolute;
+  top: clamp(88px, 17vw, 117px);
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: clamp(13px, 2.3vw, 17px);
+  font-weight: 300;
+}
+
+.promo-tile__cta svg {
+  color: var(--eshop-color-accent);
+}
+
+.promo-tile__image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 48%;
+  width: auto;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 1024px) {
+  .promo-tiles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: var(--eshop-page-max-width);
+    margin: 0 auto;
+    gap: 24px;
+    padding: 65px 20px 0;
+  }
+
+  .promo-tile {
+    height: 288px;
+  }
+
+  .promo-tile__title {
+    top: 36px;
+    font-size: 22px;
+  }
+
+  .promo-tile__cta {
+    top: 117px;
+    font-size: 16px;
+  }
+}

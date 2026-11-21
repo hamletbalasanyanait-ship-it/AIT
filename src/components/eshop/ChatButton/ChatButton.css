@@ -1,0 +1,28 @@
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  left: 21px;
+  z-index: var(--eshop-z-chat);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 2px solid var(--eshop-color-white);
+  border-radius: 50%;
+  background-color: var(--eshop-color-primary);
+  color: var(--eshop-color-white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.chat-button:hover {
+  transform: scale(1.06);
+}
+
+.chat-button:focus-visible {
+  outline: 3px solid var(--eshop-color-sky);
+  outline-offset: 2px;
+}
