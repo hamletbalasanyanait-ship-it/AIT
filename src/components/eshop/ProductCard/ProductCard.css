@@ -1,0 +1,160 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  width: 240px;
+  min-height: 725px;
+  padding: 21px 20px 20px;
+  border: 1px solid var(--eshop-color-border);
+  border-radius: var(--eshop-radius-sm);
+  background-color: var(--eshop-color-white);
+  scroll-snap-align: start;
+}
+
+.product-card__title {
+  /* Ֆիքսված բարձրություն՝ 4 տող, որպեսզի բոլոր card-երի բովանդակությունը հավասարվի */
+  display: -webkit-box;
+  height: 88px;
+  margin: 0;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  color: var(--eshop-color-text);
+  font-family: var(--eshop-font-family);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Compare checkbox ---------- */
+.product-card__compare {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 38px;
+  color: var(--eshop-color-text-muted);
+  font-size: 13px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.product-card__compare-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.product-card__compare-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--eshop-color-divider);
+  border-radius: var(--eshop-radius-sm);
+  background-color: var(--eshop-color-white);
+}
+
+.product-card__compare-input:checked + .product-card__compare-box {
+  border-color: var(--eshop-color-accent);
+  background-color: var(--eshop-color-accent);
+}
+
+.product-card__compare-input:checked + .product-card__compare-box::after {
+  content: '';
+  width: 5px;
+  height: 10px;
+  margin-top: -2px;
+  border: solid var(--eshop-color-white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.product-card__compare-input:focus-visible + .product-card__compare-box {
+  outline: 2px solid var(--eshop-color-primary);
+  outline-offset: 2px;
+}
+
+/* ---------- Image ---------- */
+.product-card__image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 286px;
+  margin-top: 33px;
+}
+
+.product-card__image img {
+  display: block;
+  max-width: 100%;
+  max-height: 194px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---------- Prices ---------- */
+.product-card__price {
+  margin: 0;
+  color: var(--eshop-color-text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.product-card__installment {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 44px 0 0;
+}
+
+.product-card__installment-label {
+  color: var(--eshop-color-text-muted);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.product-card__installment-price {
+  padding-left: 8px;
+  color: var(--eshop-color-text-muted);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/* ---------- Add to cart ---------- */
+.product-card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 36px;
+  margin-top: auto;
+  padding: 0 12px;
+  border: 2px solid var(--eshop-color-accent-border);
+  border-radius: var(--eshop-radius-pill);
+  background-color: var(--eshop-color-white);
+  color: var(--eshop-color-accent);
+  font-family: var(--eshop-font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.product-card__button:hover {
+  background-color: var(--eshop-color-accent);
+  color: var(--eshop-color-white);
+}
+
+.product-card__button:focus-visible {
+  outline: 2px solid var(--eshop-color-primary);
+  outline-offset: 2px;
+}
